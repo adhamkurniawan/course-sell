@@ -1,0 +1,40 @@
+<header>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><%= link_to "My Profile", edit_user_registration_path %></li>
+    <li><a href="#!">My Courses</a></li>
+    <li class="divider"></li>
+    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+  </ul>
+  <ul id="dropdown2" class="dropdown-content">
+    <li><%= link_to "My Profile", edit_user_registration_path %></li>
+    <li><a href="#!">My Courses</a></li>
+    <li class="divider"></li>
+    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+  </ul>
+
+
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="<%= root_url %>" class="brand-logo">Course Sell</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Courses</a></li>
+        <% if !user_signed_in? %>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Login", new_user_session_path %></li>
+        <% else %>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><%= current_user.email %><i class="material-icons right">arrow_drop_down</i></a></li>
+        <% end %>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Courses</a></li>
+        <% if !user_signed_in? %>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Login", new_user_session_path %></li>
+        <% else %>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><%= current_user.email %><i class="material-icons right">arrow_drop_down</i></a></li>
+        <% end %> 
+      </ul>
+    </div>
+  </nav>
+</header>
