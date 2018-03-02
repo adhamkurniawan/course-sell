@@ -32,10 +32,14 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'materialize-sass'
+
 gem 'devise'
 gem 'figaro'
 gem 'omniauth-facebook'
+
 gem 'toastr-rails'
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_skin'
+
 gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
+gem 'cancancan', '~> 2.0'
