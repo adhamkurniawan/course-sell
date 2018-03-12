@@ -10,12 +10,12 @@
 
   <div class="field">
     <%= f.label :address %><br />
-    <%= f.text_area :address %>
+    <%= f.text_area :address, class: "materialize-textarea" %>
   </div>
 
   <div class="field">
     <%= f.label :date_of_birth %><br />
-    <%= f.text_field :date_of_birth %>
+    <%= f.text_field :date_of_birth, type: "date", class: "datepicker" %>
   </div>
 
   <div class="field">
@@ -47,12 +47,14 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", class: "btn" %>
   </div>
 <% end %>
 
 <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn" %></p>
 
-<%= link_to "Back", :back %>
+<%= link_to "Back", :back, class: "btn" %>
+
+<%= render 'shared/datepicker' %>
