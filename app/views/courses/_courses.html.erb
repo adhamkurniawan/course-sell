@@ -10,6 +10,7 @@
             <span class="card-title grey-title text-darken-4">
               <%= course.title %>
             </span>
+            <span>Rating: <div class="review_star" data-score="<%= course.average_rating %>"></div> <br/> <%= pluralize( course.reviews.count, "Review") %></span>
           </div>
         </div>
       </div>

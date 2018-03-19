@@ -29,7 +29,7 @@
     </div>
     <div class="card-content grey-text text-darken-4">
       <h5><%= @course.title %></h5>
-      <span>Rating: <%= @course.average_rating %> <br/> <%= pluralize( @course.reviews.count, "Review") %></span>
+      <span>Rating: <div class="review_star" data-score="<%= @course.average_rating %>"></div> <br/> <%= pluralize( @course.reviews.count, "Review") %></span>
       <hr/>
       <%= @course.description %>
       <div class="collection">

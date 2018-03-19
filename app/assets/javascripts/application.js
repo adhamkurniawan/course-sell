@@ -16,3 +16,5 @@
 //= require materialize-sprockets
 //= require toastr
 //= require datepicker
+//= require_tree .
+//= require jquery.raty

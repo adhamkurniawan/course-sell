@@ -12,15 +12,9 @@
           <strong><%= review.user.name %></strong>
           <span class="right"><%= review.created_at %></span>
         </div>
-        <div class="">
-          <%= review.star %>
-        </div>
-        <div class="">
-          <%= review.comment %>
-        </div>
-        <div class="">
-          <%= link_to "Delete", [@course, review], method: :delete, data: {confirm: "Are you sure?"} if can?(:delete, review) %>
-        </div>
+        <div class=""><div class="review_star" data-score="<%= review.star %>"></div></div>
+        <div class=""><%= review.comment %></div>
+        <div class=""><%= link_to "Delete", [@course, review], method: :delete, data: {confirm: "Are you sure?"} if can?(:delete, review) %></div>
       </div>
     </div>
   <% end %>

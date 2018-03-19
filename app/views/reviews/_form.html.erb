@@ -1,5 +1,5 @@
 <%= form_for[@course, @review] do |f| %>
-  <%= f.text_field :star %>
+  <div id="review_rating"></div>
   <%= f.text_field :comment %>
 
   <%= f.hidden_field :user_id %>
