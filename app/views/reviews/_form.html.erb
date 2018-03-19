@@ -1,0 +1,9 @@
+<%= form_for[@course, @review] do |f| %>
+  <%= f.text_field :star %>
+  <%= f.text_field :comment %>
+
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :course_id %>
+
+  <%= f.submit "Add Review" %>
+<% end %>
